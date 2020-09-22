@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // MARK:- Controles da classe
+    // MARK:- Outlets
     @IBOutlet weak var lblResultado: UILabel!
     @IBOutlet weak var btnZero: UIButton!
     @IBOutlet weak var btnUm: UIButton!
@@ -31,10 +31,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnporcentagem: UIButton!
     @IBOutlet weak var btnLimpar: UIButton!
     
-    // MARK:- Variaveis da classe
+    // MARK:- Attributeds
+    
     var primeiroNumero: String = ""
     var segundoNumero: String = ""
-    var numeroNaTela: String = ""
     var tipoOperacao: String = ""
     var operacaoClicado: Bool = false
     
@@ -62,19 +62,17 @@ class ViewController: UIViewController {
         btnLimpar.layer.cornerRadius = btnLimpar.frame.height / 2
     }
     
-    // MARK:- Funcoes auxiliares
+    // MARK:- Methods
     
     func valorLabel(valor: String) {
-        if operacaoClicado {
-            if let valorDigitado = lblResultado.text {
-                lblResultado.text = valorDigitado + valor
-                segundoNumero = lblResultado.text ?? ""
+        if let valorDigitado = lblResultado.text {
+            if operacaoClicado {
+                segundoNumero = valorDigitado + valor
+            } else {
+                primeiroNumero = valorDigitado + valor
             }
-        } else {
-            if let valorDigitado = lblResultado.text {
-                lblResultado.text = valorDigitado + valor
-                primeiroNumero = lblResultado.text ?? ""
-            }
+            
+            lblResultado.text = valorDigitado + valor
         }
     }
     
@@ -91,22 +89,24 @@ class ViewController: UIViewController {
     
     func realizaCalculo() {
         var resultado: Int = 0
+        let primeiro: Int = Int(primeiroNumero) ?? 0
+        let segundo: Int = Int(segundoNumero) ?? 0
         
         switch tipoOperacao {
         case "+":
-            resultado = (Int(primeiroNumero) ?? 0) + (Int(segundoNumero) ?? 0 )
+            resultado = primeiro + segundo
         case "-":
-            resultado = (Int(primeiroNumero) ?? 0) - (Int(segundoNumero) ?? 0 )
+            resultado = primeiro - segundo
         case "*":
-            resultado = (Int(primeiroNumero) ?? 0) * (Int(segundoNumero) ?? 0 )
+            resultado = primeiro * segundo
         case "/":
-            if segundoNumero != "0" {
-                resultado = (Int(primeiroNumero) ?? 0) / (Int(segundoNumero) ?? 0 )
+            if segundo != 0 {
+                resultado = primeiro / segundo
             } else {
                 print("Não é possível efetuar a divisão por zero")
             }
         case "%":
-            resultado = ( (Int(primeiroNumero) ?? 0) * (Int(segundoNumero) ?? 0) ) / 100
+            resultado = ( primeiro * segundo ) / 100
         default:
             return
         }
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
     }
 
     
-    // MARK:- Acao dos botoes numericos
+    // MARK:- Action numbers
     
     @IBAction func btnZero(_ sender: UIButton) {
         valorLabel(valor: "0")
@@ -160,7 +160,7 @@ class ViewController: UIViewController {
         valorLabel(valor: "9")
     }
     
-    // MARK:- Acao dos botoes de operacao
+    // MARK:- Action operations
     
     @IBAction func btnIgual(_ sender: UIButton) {
         realizaCalculo()
