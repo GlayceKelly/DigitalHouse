@@ -35,27 +35,24 @@ class ViewController: UIViewController {
     private func login(email: String, password: String) {
         if let user = getUserWithEmail(email: email) {
             if user.password == password {
-                // Sucesso
-                
+                showAlert(message: "Usuário logado com sucesso!")
             } else {
-                // Inválido
+                showAlert(message: "Usuário inválido!")
             }
         } else {
-            // Alerta inválido
+            showAlert(message: "Cadastre-se")
         }
     }
     
     private func registerUser(email: String, password: String) {
         if isUserRegister(email: email) {
-             // Usuario ja registrado, alerta
-            showAlert(title: "Atenção!", message: "Usuário já registrado!")
+            showAlert(message: "Usuário já registrado!")
         } else {
             if isValidData() {
                 let user: User = User(email: email, password: password)
                 users.append(user)
                 
-                // usuario cadastrado, alerta
-                showAlert(title: "Atenção!", message: "Usuário cadastrado com sucesso!")
+                showAlert(message: "Usuário cadastrado com sucesso!")
             }
         }
     }
@@ -96,8 +93,8 @@ class ViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "Atenção", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
@@ -111,6 +108,9 @@ class ViewController: UIViewController {
             guard let password: String = passwordTextField.text else { return }
             
             login(email: email, password: password)
+            clean()
+        } else {
+            showAlert(message: "Digite um e-mail válido. A senha deve ter mais de 6 caracteres.")
         }
     }
     
@@ -120,8 +120,9 @@ class ViewController: UIViewController {
             guard let password: String = passwordTextField.text else { return }
             
             registerUser(email: email, password: password)
+            clean()
+        } else {
+            showAlert(message: "Digite um e-mail válido. A senha deve ter mais de 6 caracteres.")
         }
     }
-    
 }
-
