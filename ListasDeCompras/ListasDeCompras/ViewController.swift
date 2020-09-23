@@ -44,7 +44,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func removeITem(_ sender: UIButton) {
+        guard let name = textFieldName.text else { return }
         
+        itemManager.removeItem(name: name)
+        productListLabel.text = itemManager.getItemsName()
+        clean()
     }
     
     //MARK:- Funcoes
@@ -63,8 +67,11 @@ extension ViewController: UITextFieldDelegate {
         if itemManager.isItemRegister(name: name) {
             if let item: ItemCompra = itemManager.getItemWithName(name: name) {
                 textFieldQuantity.text = "\(item.quantity)"
+                
+                titleLabel.text = "Produto já existente"
             }
         }
+        
+        titleLabel.text = "Produto novo"
     }
 }
-

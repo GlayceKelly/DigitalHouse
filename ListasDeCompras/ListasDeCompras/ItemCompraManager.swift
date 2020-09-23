@@ -29,6 +29,16 @@ class ItemCompraManager {
         }
     }
     
+    func removeItem(name: String) {
+        if isItemRegister(name: name) {
+            if let item: ItemCompra = getItemWithName(name: name) {
+                if let index = itemsCompra.firstIndex(where: {$0 === item}) {
+                    itemsCompra.remove(at: index)
+                }
+            }
+        }
+    }
+    
     func updateItem(name: String, quantity: Int) {
         if isItemRegister(name: name) {
             if let item: ItemCompra = getItemWithName(name: name) {

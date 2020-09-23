@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "271DBB94-2A2B-450C-94EE-55812F188F7E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ListasDeCompras/ViewController.swift"
@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C85D28D8-B35F-4D9C-8B7F-7C185F52F200"
+            uuid = "27597231-B6C9-4445-8E2A-00031F64DE8A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ListasDeCompras/ItemCompraManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "registerItem(name:quantity:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "removeItem(name:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
