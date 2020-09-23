@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "840BC26C-1A01-40F3-815B-836146944254"
+            uuid = "271DBB94-2A2B-450C-94EE-55812F188F7E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ListasDeCompras/ItemCompraManager.swift"
+            filePath = "ListasDeCompras/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "editItem(name:quantity:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "saveItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1075AEDA-8F6F-4EE8-B9B0-E17959047913"
+            uuid = "C85D28D8-B35F-4D9C-8B7F-7C185F52F200"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ListasDeCompras/ItemCompraManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "createItem(name:quantity:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "171DBFF5-1EC5-4926-A186-9431FF7264FE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ListasDeCompras/ItemCompraManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "getItems(name:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "registerItem(name:quantity:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

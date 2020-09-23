@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        textFieldName.delegate = self
     }
 
     //MARK:- Actions
@@ -32,13 +34,13 @@ class ViewController: UIViewController {
         guard let name = textFieldName.text else { return }
         guard let quantity = Int(textFieldQuantity.text ?? "") else { return }
         
-        itemManager.createItem(name: name, quantity: quantity)
-        productListLabel.text = itemManager.getItems(name: name)
+        itemManager.registerItem(name: name, quantity: quantity)
+        productListLabel.text = itemManager.getItemsName()
         clean()
     }
     
     @IBAction func cleanItem(_ sender: UIButton) {
-        
+        clean()
     }
     
     @IBAction func removeITem(_ sender: UIButton) {
@@ -52,5 +54,17 @@ class ViewController: UIViewController {
         textFieldQuantity.text = ""
     }
     
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let name = textFieldName.text else { return }
+        
+        if itemManager.isItemRegister(name: name) {
+            if let item: ItemCompra = itemManager.getItemWithName(name: name) {
+                textFieldQuantity.text = "\(item.quantity)"
+            }
+        }
+    }
 }
 
