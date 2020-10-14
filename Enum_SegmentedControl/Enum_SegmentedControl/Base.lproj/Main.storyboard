@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Enum_SegmentedControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wwH-De-7xk">
+                                <rect key="frame" x="16" y="204" width="382" height="32"/>
+                                <segments>
+                                    <segment title="Alunos"/>
+                                    <segment title="Professores"/>
+                                    <segment title="Diretores"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changedSegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="osh-RG-ooC"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3B-cN-RAh">
+                                <rect key="frame" x="177" y="305" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ij2-Hc-0QX"/>
+                                    <constraint firstAttribute="width" constant="60" id="iIb-Ob-2x3"/>
+                                </constraints>
+                                <state key="normal" title="Verifica"/>
+                                <connections>
+                                    <action selector="actionShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oo3-cg-Wn8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wwH-De-7xk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="HBV-WA-syy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wwH-De-7xk" secondAttribute="trailing" constant="16" id="TTP-C2-2Bg"/>
+                            <constraint firstItem="w3B-cN-RAh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UCz-1W-NLQ"/>
+                            <constraint firstItem="w3B-cN-RAh" firstAttribute="top" secondItem="wwH-De-7xk" secondAttribute="bottom" constant="70" id="YMh-w6-U9g"/>
+                            <constraint firstItem="wwH-De-7xk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zba-gS-jRl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="wwH-De-7xk" id="z2B-4N-Uyq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>

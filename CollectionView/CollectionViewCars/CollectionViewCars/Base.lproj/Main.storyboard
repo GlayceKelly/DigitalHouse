@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewCars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VRR-tn-aLh">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VcN-Wg-lyq">
+                                    <size key="itemSize" width="181" height="236"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCellCars" id="5n7-ij-oU8" customClass="CollectionViewCellCars" customModule="CollectionViewCars" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XKb-NR-3MO">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="236"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zfo-Hg-UMR">
+                                                    <rect key="frame" x="8" y="8" width="165" height="154"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnc-su-J4Z">
+                                                    <rect key="frame" x="8" y="182" width="165" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="gnc-su-J4Z" secondAttribute="trailing" constant="8" id="0yF-Bf-4b6"/>
+                                                <constraint firstItem="gnc-su-J4Z" firstAttribute="leading" secondItem="XKb-NR-3MO" secondAttribute="leading" constant="8" id="2U1-94-TNS"/>
+                                                <constraint firstItem="gnc-su-J4Z" firstAttribute="top" secondItem="Zfo-Hg-UMR" secondAttribute="bottom" constant="20" id="8Xw-Px-fYA"/>
+                                                <constraint firstItem="Zfo-Hg-UMR" firstAttribute="leading" secondItem="XKb-NR-3MO" secondAttribute="leading" constant="8" id="R6l-we-XkT"/>
+                                                <constraint firstItem="Zfo-Hg-UMR" firstAttribute="top" secondItem="XKb-NR-3MO" secondAttribute="top" constant="8" id="XSN-zG-vm0"/>
+                                                <constraint firstAttribute="bottom" secondItem="gnc-su-J4Z" secondAttribute="bottom" constant="30" id="etQ-Yd-6Wn"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zfo-Hg-UMR" secondAttribute="trailing" constant="8" id="juq-yJ-YVF"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="181" height="236"/>
+                                        <connections>
+                                            <outlet property="carImageView" destination="Zfo-Hg-UMR" id="gb2-RZ-DWj"/>
+                                            <outlet property="nameCarLabel" destination="gnc-su-J4Z" id="xZA-jV-s6S"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="VRR-tn-aLh" secondAttribute="trailing" id="60b-2D-vxh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="VRR-tn-aLh" secondAttribute="bottom" id="FsD-ak-SB2"/>
+                            <constraint firstItem="VRR-tn-aLh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="IfJ-mE-Kpd"/>
+                            <constraint firstItem="VRR-tn-aLh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tgS-bU-HCY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionViewCars" destination="VRR-tn-aLh" id="Uf4-WA-kHM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
