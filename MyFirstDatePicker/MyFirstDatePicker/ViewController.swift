@@ -23,7 +23,15 @@ class ViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
-        print(datePicker.date)
+//        print(datePicker.date)
+        let dateFormatter: DateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        let dateDescription: String = dateFormatter.string(from: datePicker.date)
+        print(dateDescription)
     }
 }
 
