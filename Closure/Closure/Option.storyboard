@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Se-1B-SPK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Option View Controller-->
+        <scene sceneID="l0h-Yx-2vc">
+            <objects>
+                <viewController id="5Se-1B-SPK" customClass="OptionViewController" customModule="Closure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ViE-cB-NAD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="3Eg-nU-hyI">
+                                <rect key="frame" x="20" y="164" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Alugar"/>
+                                    <segment title="Comprar"/>
+                                    <segment title="Vender"/>
+                                </segments>
+                                <connections>
+                                    <action selector="optionsSegmentedControlAction:" destination="5Se-1B-SPK" eventType="valueChanged" id="rDp-zG-7pz"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="a6G-Zv-6YK">
+                                <rect key="frame" x="20" y="275" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Azul"/>
+                                    <segment title="Verde"/>
+                                    <segment title="Vermelho"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorsSegmentedControlAction:" destination="5Se-1B-SPK" eventType="valueChanged" id="iWl-TW-ow8"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Eg-nU-hyI" firstAttribute="top" secondItem="c18-er-sQ5" secondAttribute="top" constant="120" id="EkI-pW-ZsT"/>
+                            <constraint firstItem="3Eg-nU-hyI" firstAttribute="leading" secondItem="c18-er-sQ5" secondAttribute="leading" constant="20" id="NDX-a8-aIy"/>
+                            <constraint firstItem="a6G-Zv-6YK" firstAttribute="leading" secondItem="c18-er-sQ5" secondAttribute="leading" constant="20" id="SJk-GX-EDS"/>
+                            <constraint firstItem="c18-er-sQ5" firstAttribute="trailing" secondItem="a6G-Zv-6YK" secondAttribute="trailing" constant="20" id="ZdT-sb-Kh4"/>
+                            <constraint firstItem="a6G-Zv-6YK" firstAttribute="top" secondItem="3Eg-nU-hyI" secondAttribute="bottom" constant="80" id="lUr-r2-oqB"/>
+                            <constraint firstItem="c18-er-sQ5" firstAttribute="trailing" secondItem="3Eg-nU-hyI" secondAttribute="trailing" constant="20" id="xha-3c-3sv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c18-er-sQ5"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorsSegmentedControl" destination="a6G-Zv-6YK" id="Dw4-2v-pEp"/>
+                        <outlet property="optionsSegmentedControl" destination="3Eg-nU-hyI" id="wQB-wK-vAh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXl-7S-W1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572.46376811594212" y="-54.241071428571423"/>
+        </scene>
+    </scenes>
+</document>
