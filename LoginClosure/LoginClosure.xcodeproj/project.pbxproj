@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB99AB8F2546640D0071B7FA /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99AB8E2546640D0071B7FA /* RegisterManager.swift */; };
 		EBFAA8CD2543EC8200357D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAA8CC2543EC8200357D48 /* AppDelegate.swift */; };
 		EBFAA8CF2543EC8200357D48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAA8CE2543EC8200357D48 /* SceneDelegate.swift */; };
 		EBFAA8D12543EC8200357D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAA8D02543EC8200357D48 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB99AB8E2546640D0071B7FA /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
 		EBFAA8C92543EC8200357D48 /* LoginClosure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginClosure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFAA8CC2543EC8200357D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBFAA8CE2543EC8200357D48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				EBFAA8CC2543EC8200357D48 /* AppDelegate.swift */,
 				EBFAA8CE2543EC8200357D48 /* SceneDelegate.swift */,
 				EBFAA8D02543EC8200357D48 /* ViewController.swift */,
+				EB99AB8E2546640D0071B7FA /* RegisterManager.swift */,
 				EBFAA8E22543EF8E00357D48 /* RegisterViewController.swift */,
 				EBFAA8E42543EF9800357D48 /* Register.storyboard */,
 				EBFAA8E02543EF5700357D48 /* User.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				EBFAA8E12543EF5700357D48 /* User.swift in Sources */,
 				EBFAA8E32543EF8E00357D48 /* RegisterViewController.swift in Sources */,
+				EB99AB8F2546640D0071B7FA /* RegisterManager.swift in Sources */,
 				EBFAA8D12543EC8200357D48 /* ViewController.swift in Sources */,
 				EBFAA8CD2543EC8200357D48 /* AppDelegate.swift in Sources */,
 				EBFAA8CF2543EC8200357D48 /* SceneDelegate.swift in Sources */,
