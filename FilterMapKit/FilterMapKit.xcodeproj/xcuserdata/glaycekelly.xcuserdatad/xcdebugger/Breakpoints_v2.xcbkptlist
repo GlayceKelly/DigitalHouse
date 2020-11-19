@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "805D3E62-7BF0-4895-842D-818336710C95"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E79408DA-B7C0-4964-82C4-84C0BD796EA5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FilterMapKit/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "selectionCategory(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E79408DA-B7C0-4964-82C4-84C0BD796EA5 - d1196b52aabaef79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FilterMapKit.ViewController.selectionCategory(__C.UISegmentedControl) -&gt; ()"
+                  moduleName = "FilterMapKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glaycekelly/Desktop/Digital%20House/FilterMapKit/FilterMapKit/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "E79408DA-B7C0-4964-82C4-84C0BD796EA5 - d1196b52aabaef79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FilterMapKit.ViewController.selectionCategory(__C.UISegmentedControl) -&gt; ()"
+                  moduleName = "FilterMapKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glaycekelly/Desktop/Digital%20House/FilterMapKit/FilterMapKit/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "E79408DA-B7C0-4964-82C4-84C0BD796EA5 - d1196b52aabaef79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FilterMapKit.ViewController.selectionCategory(__C.UISegmentedControl) -&gt; ()"
+                  moduleName = "FilterMapKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glaycekelly/Desktop/Digital%20House/FilterMapKit/FilterMapKit/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "E79408DA-B7C0-4964-82C4-84C0BD796EA5 - d1196b52aabaef79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FilterMapKit.ViewController.selectionCategory(__C.UISegmentedControl) -&gt; ()"
+                  moduleName = "FilterMapKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glaycekelly/Desktop/Digital%20House/FilterMapKit/FilterMapKit/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "836">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
