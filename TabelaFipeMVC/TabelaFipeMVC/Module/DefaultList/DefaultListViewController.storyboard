@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zf9-Ky-WlL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Default List View Controller-->
+        <scene sceneID="j6z-mz-GDk">
+            <objects>
+                <viewController id="Zf9-Ky-WlL" customClass="DefaultListViewController" customModule="TabelaFipeMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pe7-bS-by9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thD-3L-nIk">
+                                <rect key="frame" x="0.0" y="242" width="414" height="620"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Pesquise pela marca" translatesAutoresizingMaskIntoConstraints="NO" id="svs-2d-XZ3">
+                                <rect key="frame" x="0.0" y="156" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tabela FIPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kio-sQ-qIi">
+                                <rect key="frame" x="16" y="109" width="382" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="43L-GR-dGh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="thD-3L-nIk" firstAttribute="bottom" secondItem="43L-GR-dGh" secondAttribute="bottom" id="0VK-S9-ZbH"/>
+                            <constraint firstItem="thD-3L-nIk" firstAttribute="trailing" secondItem="43L-GR-dGh" secondAttribute="trailing" id="60w-g8-byz"/>
+                            <constraint firstItem="kio-sQ-qIi" firstAttribute="leading" secondItem="43L-GR-dGh" secondAttribute="leading" constant="16" id="7ga-cK-5ON"/>
+                            <constraint firstItem="svs-2d-XZ3" firstAttribute="top" secondItem="kio-sQ-qIi" secondAttribute="bottom" constant="20" id="H0l-To-RsG"/>
+                            <constraint firstItem="svs-2d-XZ3" firstAttribute="trailing" secondItem="43L-GR-dGh" secondAttribute="trailing" id="Lzk-gJ-01T"/>
+                            <constraint firstItem="svs-2d-XZ3" firstAttribute="leading" secondItem="43L-GR-dGh" secondAttribute="leading" id="Mmb-69-YTU"/>
+                            <constraint firstItem="thD-3L-nIk" firstAttribute="top" secondItem="svs-2d-XZ3" secondAttribute="bottom" constant="30" id="PKh-ZL-P28"/>
+                            <constraint firstItem="thD-3L-nIk" firstAttribute="leading" secondItem="43L-GR-dGh" secondAttribute="leading" id="hFZ-ZN-H6d"/>
+                            <constraint firstItem="kio-sQ-qIi" firstAttribute="top" secondItem="43L-GR-dGh" secondAttribute="top" constant="65" id="qIR-4s-OA1"/>
+                            <constraint firstItem="43L-GR-dGh" firstAttribute="trailing" secondItem="kio-sQ-qIi" secondAttribute="trailing" constant="16" id="qje-V8-Z6L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="defaultTableView" destination="thD-3L-nIk" id="Ij3-n5-oId"/>
+                        <outlet property="searchBar" destination="svs-2d-XZ3" id="HRv-6f-Nct"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pe-b3-Zct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.68115942028987" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

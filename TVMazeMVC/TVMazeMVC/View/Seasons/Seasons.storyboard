@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Xl-wk-MVG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Seasons View Controller-->
+        <scene sceneID="fJs-3o-5Cc">
+            <objects>
+                <viewController id="7Xl-wk-MVG" customClass="SeasonsViewController" customModule="TVMazeMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AMl-vT-F3N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g2b-Vz-a51">
+                                <rect key="frame" x="0.0" y="314" width="414" height="548"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seasons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTo-5n-25t">
+                                <rect key="frame" x="16" y="84" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vvn-1j-4bw">
+                                <rect key="frame" x="152" y="118" width="110" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="AsN-k5-Ly2"/>
+                                    <constraint firstAttribute="width" constant="110" id="Qxu-2G-wsg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kirby Buckets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0C-gd-rXU">
+                                <rect key="frame" x="16" y="272" width="382" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C5d-xf-wlu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vvn-1j-4bw" firstAttribute="top" secondItem="KTo-5n-25t" secondAttribute="bottom" constant="10" id="7pi-YR-mcg"/>
+                            <constraint firstItem="KTo-5n-25t" firstAttribute="leading" secondItem="C5d-xf-wlu" secondAttribute="leading" constant="16" id="8A6-1f-wzy"/>
+                            <constraint firstItem="C5d-xf-wlu" firstAttribute="bottom" secondItem="g2b-Vz-a51" secondAttribute="bottom" id="Fh4-Tb-i55"/>
+                            <constraint firstItem="KTo-5n-25t" firstAttribute="top" secondItem="C5d-xf-wlu" secondAttribute="top" constant="40" id="PUG-VS-WGp"/>
+                            <constraint firstItem="g2b-Vz-a51" firstAttribute="leading" secondItem="C5d-xf-wlu" secondAttribute="leading" id="dds-E5-XBo"/>
+                            <constraint firstItem="C5d-xf-wlu" firstAttribute="trailing" secondItem="X0C-gd-rXU" secondAttribute="trailing" constant="16" id="glC-ar-mS4"/>
+                            <constraint firstItem="g2b-Vz-a51" firstAttribute="trailing" secondItem="C5d-xf-wlu" secondAttribute="trailing" id="h6j-iW-nNu"/>
+                            <constraint firstItem="vvn-1j-4bw" firstAttribute="centerX" secondItem="AMl-vT-F3N" secondAttribute="centerX" id="hi6-Tk-bxX"/>
+                            <constraint firstItem="C5d-xf-wlu" firstAttribute="trailing" secondItem="KTo-5n-25t" secondAttribute="trailing" constant="16" id="oRc-g1-O5s"/>
+                            <constraint firstItem="X0C-gd-rXU" firstAttribute="leading" secondItem="C5d-xf-wlu" secondAttribute="leading" constant="16" id="ow7-d6-qzn"/>
+                            <constraint firstItem="X0C-gd-rXU" firstAttribute="top" secondItem="vvn-1j-4bw" secondAttribute="bottom" constant="4" id="q0E-us-ile"/>
+                            <constraint firstItem="g2b-Vz-a51" firstAttribute="top" secondItem="X0C-gd-rXU" secondAttribute="bottom" constant="20" id="rFD-7V-mhf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="X0C-gd-rXU" id="WOr-mg-7OF"/>
+                        <outlet property="seasonsTableView" destination="g2b-Vz-a51" id="tmT-ja-b43"/>
+                        <outlet property="showImageView" destination="vvn-1j-4bw" id="6eT-75-BfR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdY-0M-XKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24.637681159420293" y="109.15178571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

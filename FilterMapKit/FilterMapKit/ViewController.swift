@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
     @IBAction func selectionCategory(_ sender: UISegmentedControl) {
         mapView.removeAnnotations(customLocations)
+        customLocations.removeAll()
         
         switch categorySegmentedControl.selectedSegmentIndex {
         case CategorySelected.supermarket:
@@ -54,6 +55,7 @@ class ViewController: UIViewController {
             
         case CategorySelected.gym:
             configureGymLocations()
+            
         default:
             print("Categoria inválida")
         }
@@ -67,7 +69,6 @@ class ViewController: UIViewController {
         let locationHortifruti: CLLocation = CLLocation(latitude: -23.534024, longitude: -46.565818)
         let locationKanguru: CLLocation = CLLocation(latitude: -23.532869, longitude: -46.559634)
         
-        customLocations.removeAll()
         customLocations.append(CustomLocation(coordinate: locationPepe.coordinate,
                                               title: "Supermercado Pepe",
                                               subtitle: "",
@@ -92,7 +93,6 @@ class ViewController: UIViewController {
         let locationUnip: CLLocation = CLLocation(latitude: -23.528295, longitude: -46.564805)
         let locationUnicid: CLLocation = CLLocation(latitude: -23.536434, longitude: -46.560240)
         
-        customLocations.removeAll()
         customLocations.append(CustomLocation(coordinate: locationUnip.coordinate,
                                               title: "UNIP",
                                               subtitle: "",
@@ -112,7 +112,6 @@ class ViewController: UIViewController {
         let locationSmartFit: CLLocation = CLLocation(latitude: -23.5338757, longitude: -46.565390)
         let locationModelaCenter: CLLocation = CLLocation(latitude: -23.534932, longitude: -46.569563)
         
-        customLocations.removeAll()
         customLocations.append(CustomLocation(coordinate: locationSmartFit.coordinate,
                                               title: "SmartFit",
                                               subtitle: "",
