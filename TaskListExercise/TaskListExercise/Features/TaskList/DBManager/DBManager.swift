@@ -58,4 +58,12 @@ class DBManager {
         try? context.save()
     }
     
+    func completedTask(id: NSManagedObjectID, isCompleted: Bool) {
+        let context: NSManagedObjectContext = persistentContainer.viewContext
+        let taskList: TaskList? = context.object(with: id) as? TaskList
+        taskList?.isCompleted = isCompleted
+        
+        try? context.save()
+    }
+    
 }

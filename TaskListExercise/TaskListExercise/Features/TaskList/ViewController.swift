@@ -17,17 +17,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //MARK: - Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var newTaskTextField: UITextField!
     @IBOutlet weak var addingTaskButton: UIButton!
     @IBOutlet weak var tasksTableView: UITableView!
     
-    //MARK: - Properties
+    // MARK: - Properties
+    
     var arrayTaskList: [TaskList] = []
     
-    //MARK: - Lifecycle
-
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,24 +41,38 @@ class ViewController: UIViewController {
         loadData()
     }
     
-    //MARK: - Actions
+    // MARK: - Actions
+    
     @IBAction func addingTaskAction(_ sender: UIButton) {
         guard let newTask: String = newTaskTextField.text else { return }
+        
         DBManager.shared.saveData(with: newTask) { (taskList) in
             self.arrayTaskList.append(taskList)
         }
         
         tasksTableView.reloadData()
+        cleanFields()
         print("Novo item salvo: \(newTask)")
     }
+}
+
+// MARK: - Private Methods
+
+extension ViewController {
     
-    //MARK: - Methods
-    func loadData() {
+    private func loadData() {
         DBManager.shared.loadData { (arrayTaskList) in
             self.arrayTaskList.append(contentsOf: arrayTaskList)
         }
     }
+    
+    private func cleanFields() {
+        newTaskTextField.text = ""
+    }
+    
 }
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,7 +81,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TaskListTableViewCell", owner: self, options: nil)?.first as! TaskListTableViewCell
-        cell.prepareCell(with: self.arrayTaskList[indexPath.row])
+        cell.prepareCell(with: self.arrayTaskList[indexPath.row], tableView: tableView)
         
         return cell
     }
@@ -74,6 +89,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
-    
 }
