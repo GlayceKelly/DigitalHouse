@@ -14,6 +14,7 @@
 		EB0A06562581023000CF78C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0A06552581023000CF78C7 /* Assets.xcassets */; };
 		EB0A06592581023000CF78C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0A06572581023000CF78C7 /* LaunchScreen.storyboard */; };
 		EB0A06642581033D00CF78C7 /* TaskList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB0A06622581033D00CF78C7 /* TaskList.xcdatamodeld */; };
+		EB9C4C03258C527400ACF57B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C4C02258C527400ACF57B /* Utils.swift */; };
 		EBD5E3FD2584606000088775 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD5E3FC2584606000088775 /* DBManager.swift */; };
 		EBD5E4052584644700088775 /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD5E4032584644700088775 /* TaskListTableViewCell.swift */; };
 		EBD5E4062584644700088775 /* TaskListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBD5E4042584644700088775 /* TaskListTableViewCell.xib */; };
@@ -29,6 +30,7 @@
 		EB0A06582581023000CF78C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB0A065A2581023000CF78C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0A06632581033D00CF78C7 /* TaskList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskList.xcdatamodel; sourceTree = "<group>"; };
+		EB9C4C02258C527400ACF57B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		EBD5E3FC2584606000088775 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		EBD5E4032584644700088775 /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
 		EBD5E4042584644700088775 /* TaskListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListTableViewCell.xib; sourceTree = "<group>"; };
@@ -75,9 +77,18 @@
 			path = TaskListExercise;
 			sourceTree = "<group>";
 		};
+		EB9C4C01258C525900ACF57B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EB9C4C02258C527400ACF57B /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		EBD5E3FF258463FC00088775 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EB9C4C01258C525900ACF57B /* Utils */,
 				EBD5E4002584640C00088775 /* TaskList */,
 			);
 			path = Features;
@@ -186,6 +197,7 @@
 				EB0A06642581033D00CF78C7 /* TaskList.xcdatamodeld in Sources */,
 				EBD5E4052584644700088775 /* TaskListTableViewCell.swift in Sources */,
 				EB0A06512581022B00CF78C7 /* ViewController.swift in Sources */,
+				EB9C4C03258C527400ACF57B /* Utils.swift in Sources */,
 				EB0A064D2581022B00CF78C7 /* AppDelegate.swift in Sources */,
 				EB0A064F2581022B00CF78C7 /* SceneDelegate.swift in Sources */,
 			);

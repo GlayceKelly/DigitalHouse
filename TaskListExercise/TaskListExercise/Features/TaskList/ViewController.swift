@@ -81,7 +81,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TaskListTableViewCell", owner: self, options: nil)?.first as! TaskListTableViewCell
-        cell.prepareCell(with: self.arrayTaskList[indexPath.row], tableView: tableView)
+        cell.prepareCell(with: self.arrayTaskList[indexPath.row], tableView: tableView, viewController: self)
         
         return cell
     }

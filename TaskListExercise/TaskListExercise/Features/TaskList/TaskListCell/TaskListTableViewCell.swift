@@ -13,6 +13,7 @@ class TaskListTableViewCell: UITableViewCell {
     
     var taskList: TaskList?
     var tableView: UITableView?
+    var viewController: UIViewController?
     
     // MARK: - Outlets
     
@@ -21,7 +22,7 @@ class TaskListTableViewCell: UITableViewCell {
     @IBOutlet weak var doneLabel: UILabel!
     
     // MARK: - Lifecycle
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -40,9 +41,10 @@ class TaskListTableViewCell: UITableViewCell {
 
 extension TaskListTableViewCell {
     
-    func prepareCell(with taskList: TaskList, tableView: UITableView) {
+    func prepareCell(with taskList: TaskList, tableView: UITableView, viewController: UIViewController) {
         self.taskList = taskList
         self.tableView = tableView
+        self.viewController = viewController
         
         configureLabel(with: taskList)
     }
@@ -60,9 +62,9 @@ extension TaskListTableViewCell {
     // MARK: - Helpers
     
     @objc func handleEditGesture(_ sender: UITapGestureRecognizer) {
-        guard let taskList: TaskList = taskList else { return }
-        DBManager.shared.editData(id: taskList.objectID, name: "EDITADO2")
-        tableView?.reloadData()
+        let utils: Utils = Utils()
+        utils.delegate = self
+        utils.openAlertCotroller(viewController: viewController, title: "Editar tarefa", message: nil)
         print("edit!!")
     }
     
@@ -71,5 +73,16 @@ extension TaskListTableViewCell {
         DBManager.shared.completedTask(id: taskList.objectID, isCompleted: true)
         tableView?.reloadData()
         print("done!!")
+    }
+}
+
+// MARK: - UtilsDelegate
+
+extension TaskListTableViewCell: UtilsDelegate {
+    func didTouchEditTask(editedTask: String) {
+        guard let taskList: TaskList = taskList else { return }
+        DBManager.shared.editData(id: taskList.objectID, name: editedTask)
+        tableView?.reloadData()
+        print("Texto editado: \(editedTask)")
     }
 }
